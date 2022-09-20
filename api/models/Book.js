@@ -7,7 +7,11 @@ import mongoose from 'mongoose';
  */
 
 const schema = new mongoose.Schema({
-    author: String,
+    //Manera de pasar mas propiedad o reglas
+    author: {
+        type: String,
+        required: true
+    },
     title: String,
     genre: String,
     category: String,
@@ -19,4 +23,4 @@ const schema = new mongoose.Schema({
     coverage: String,
 })
 
-export default mongose.model(Book, schema)
+export default mongoose.model('Book', schema)
