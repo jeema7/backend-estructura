@@ -11,7 +11,7 @@ router.route('/books')
 .get(bookController.getAllBooks)
 .post(bookController.createBook);
 
-router.route('books/:id')
+router.route('/books/:id')
 .get(bookController.getBookById)
 .post(bookController.updateBookById)
 .delete(bookController.deleteBookById);
