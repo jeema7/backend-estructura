@@ -1,5 +1,6 @@
 import express from 'express'
 import bookRoutes from './routes/bookRoutes.js'
+import clientRoutes from './routes/ClientRoutes.js'
 
 const api = express()
 //TODO: Configurar Middlwares
@@ -12,7 +13,8 @@ api.get('/status', (req,res) =>{
         msg: 'API en linea y funcionando'
     })
 } )
-
+// Reg de routes
 api.use(bookRoutes)
+api.use(clientRoutes)
 
 export default api
