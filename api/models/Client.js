@@ -2,8 +2,8 @@ import mongoose from "mongoose";
 
 const schema = new mongoose.Schema({
     name: String,
-    birthday: Date,
-    addresses: [String],
+    birthday: !Date,
+    addresses: ![String],
     references: [
       {
         name: String,

@@ -14,7 +14,9 @@ const getAllBooks = async (_, res) => {
       error,
     });
   }
-}; //Como esto puede fallar , usamos un trycatch
+}; 
+
+//Como esto puede fallar , usamos un trycatch
 const createBook = async (req, res) => {
   try {
     const newBook = await Book.create(req.body);
@@ -87,4 +89,4 @@ const deleteBookById = async (req, res) => {
   }
 };
 
-export { getAllBooks, createBook, getBookById, updateBookById, deleteBookById };
+export { getAllBooks, createBook, getBookById, updateBookById, deleteBookById};

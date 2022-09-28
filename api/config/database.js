@@ -1,5 +1,6 @@
 //Connecting to mongoose
-import mongoose from 'mongoose'
+import mongoose from 'mongoose';
+import config from './index.js';
 
 const db = mongoose.connection;
 // Por buena practica debemos definir un posible error o confirmar que se ha conectado a la base de datos
@@ -14,5 +15,5 @@ db.on('connecting', () =>{
 
 
 export default () => {
-    mongoose.connect('mongodb://localhost/library')
+    mongoose.connect(config.database.uri)
 }

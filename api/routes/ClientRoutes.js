@@ -7,12 +7,12 @@ const router = Router();
  */
 
 router.route('/clients')
-.get()
+.get(clientController.GetAllClients)
 .post(clientController.createClient)
 
 router.route('/clients/:id')
-.get()
-.put()
-.delete()
+.get(clientController.getClientById)
+.put(clientController.updateClientById)
+.delete(clientController.deleteClientByID)
 
 export default router
