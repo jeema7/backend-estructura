@@ -1,6 +1,8 @@
 import { Router } from "express";
 import * as clientController from '../controllers/clientController.js'
+import createClientValidator from "../middlewares/createClientValidator.js";
 const router = Router();
+
 
 /**
  * TODO: Aca van todas las rutas de clientes
@@ -8,7 +10,7 @@ const router = Router();
 
 router.route('/clients')
 .get(clientController.GetAllClients)
-.post(clientController.createClient)
+.post(createClientValidator,clientController.createClient)
 
 router.route('/clients/:id')
 .get(clientController.getClientById)
